@@ -1,9 +1,3 @@
-@font-face {
-	font-family: 'codropsicons';
-	font-weight: normal;
-	font-style: normal;
-	src: url('../fonts/codropsicons/codropsicons.eot');
-	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
 
 *,
@@ -70,32 +64,30 @@ a:focus {
 	border-right: 0;
 }
 
-.codrops-icon {
+.icon {
 	width: 4em;
 }
 
-.codrops-icon span {
+.icon span {
 	display: none;
 }
 
-.codrops-icon::before {
-	font-family: 'codropsicons';
-	font-size: 1.15em;
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	line-height: 1;
-	text-transform: none;
+.icon::before {
+	font-family: 'Playfair Display';
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 }
 
-.codrops-icon--drop::before {
+.icon--drop::before {
 	content: '\e001';
-	color: #09c;
+	color: rgb(8, 149, 196);
 }
 
-.codrops-icon--prev::before {
+.icon--prev::before {
 	content: '\e004';
 }
 
@@ -124,25 +116,3 @@ a:focus {
 	}
 }
 
-/* Styles for sponsor */
-body #cdawrap { top: auto; right: auto; bottom: 12px; left: 12px; border: 1px solid #d1b790; background: none; }
-.partisan { position: absolute; bottom: 0; left: 0; width: 38em; padding: 4.5em 7.5em 1.5em 5.5em; }
-.partisan__bg { position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.5; }
-.partisan__link { position: relative; display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; }
-.partisan__img, .partisan__title { opacity: 0.85; -webkit-transition: opacity 0.1s; transition: opacity 0.1s; }
-.partisan__link:hover .partisan__img, .partisan__link:hover .partisan__title { opacity: 1; }
-.partisan__img { max-width: 42%; }
-.partisan__title { font-family: 'Playfair Display'; font-weight: bold; position: relative; margin: 0.5em 0 0 0.85em; color: #555d27; }
-.partisan__title::before { content: 'Sponsored by:'; font-size: 0.5em; font-weight: bold; position: absolute; bottom: 100%; left: 0; padding: 0 0 1em 0; letter-spacing: 0.25em; text-transform: uppercase; color: #95a534; }
-@media screen and (max-width:80em) {
-	.partisan { font-size: 76%; }
-	.partisan__title::before { font-size: 0.25em; }
-}
-@media screen and (max-width:60em) {
-	.game-holder .message--instructions { bottom: 5.5em; }
-	.partisan { width: 100%; height: auto; padding: 1.75em 0.5em 0.5em; text-align: center; background: rgba(190, 215, 48, 0.5); }
-	.partisan__bg { display: none; }
-	.partisan__img { display: none; }
-	.partisan__title { margin: 0; }
-	.partisan__title::before { width: 100%; padding: 0 0 0.25em; }
-}
